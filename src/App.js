@@ -2,8 +2,7 @@ import { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Directory from "./routes/directory.component";
-import Plurals from "./routes/plurals.component";
-import Subjunctive from "./routes/subjunctive.component";
+import { sections } from "./resources/sections";
 
 const App = () => {
   return (
@@ -15,8 +14,11 @@ const App = () => {
       <main>
         <Routes>
           <Route path='/' element={<Directory />}></Route> 
-          <Route path='plurals' element={<Plurals />}></Route>
-          <Route path='subjunctive' element={<Subjunctive />}></Route>
+          {
+            sections.map((section) => 
+              <Route path={section.route} element={section.component}></Route>
+            )
+          }
         </Routes>      
       </main>
       <footer>
