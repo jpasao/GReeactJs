@@ -1,19 +1,24 @@
+$color-grey: #dcdcdc;
+$color-yellow: #ffb300;
+$color-yellow-light: #ffe8b4; 
+$color-orange: #ff7b00;
+
 .navigation {  
   background-color: transparent;
-  border: 3px solid #ffb300;
-  color: #dcdcdc;
+  border: 3px solid $color-yellow;
+  color: $color-grey;
 }
 
 .back {
   background-color: transparent;
-  border: 3px solid #ff7b00;
-  color: #dcdcdc;
+  border: 3px solid $color-orange;
+  color: $color-grey;
 }
 
 .scroll {
   background-color: transparent;
   border: none;
-  color: #dcdcdc;
+  color: $color-grey;
   position: fixed;
   right: 1vh;
   bottom: 0;
@@ -38,4 +43,8 @@ body {
   font-family: 'NotoSerif', -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;  
 }
 
+article em {
+  font-style: normal;
+  color: $color-yellow-light;
+}
 

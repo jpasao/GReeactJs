@@ -20,8 +20,7 @@ const ScrollButton = () => {
 
   window.addEventListener('scroll', toggleVisible);
 
-  const icon = <FaArrowCircleUp 
-    onClick={scrollToTop} />
+  const icon = <FaArrowCircleUp onClick={scrollToTop} />
 
   const props = {
     type: BUTTON_TYPES.scroll,

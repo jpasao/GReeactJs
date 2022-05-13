@@ -1,15 +1,19 @@
 import Plurals from "../routes/plurals.component";
 import Subjunctive from "../routes/subjunctive.component";
 import Time from "../routes/time.component";
+import Imperative from "../routes/imperative.component";
+import Adjective from "../routes/adjective.component";
+import ThereIs from "../routes/there-is.component";
+import AccusativeWeak from "../routes/accusative-weak.component";
 
 export const sections = [
   {  route: 'plurals', component: <Plurals title='Plural of -ος, -α, and -ο' /> },
   {  route: 'subjunctive', component: <Subjunctive title='Subjunctive'/> },
   {  route: 'time', component: <Time title='Telling Time' /> },
-  // {  route: 'imperative', component: <Imperative title='Imperative' /> },
-  // {  route: 'adjective', component: <Adjective title='Adjective Endings (-ος, -η, -ο)' /> },
-  // {  route: 'there-is', component: <ThereIs title='υπάρχει/υπάρχουν and αρέσει/αρέσουν' /> },
-  // {  route: 'accusative-weak', component: <AccusativeWeak title='Accusative Weak Personal Pronouns' /> },
+  {  route: 'imperative', component: <Imperative title='Imperative' /> },
+  {  route: 'adjective', component: <Adjective title='Adjective Endings (-ος, -η, -ο)' /> },
+  {  route: 'there-is', component: <ThereIs title='υπάρχει / υπάρχουν and αρέσει / αρέσουν' /> },
+  {  route: 'accusative-weak', component: <AccusativeWeak title='Accusative Weak Personal Pronouns' /> },
   // {  route: 'advebs', component: <Adverbs title='Adjectives Versus Adverbs' /> },
   // {  route: 'genitive-weak', component: <GenitiveWeak title='Genitive Weak Personal Pronouns' /> },
   // {  route: 'indefinite-article', component: <IndefiniteArticle title='Use of the Indefinite Article in Modern Greek' /> },
