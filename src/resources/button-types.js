@@ -1,6 +1,7 @@
 export const BUTTON_TYPES = {
   navigation: 'navigation',
-  back: 'back'
+  back: 'back',
+  scroll: 'scroll'
 }
 
 export const BUTTON_TEXTS = {

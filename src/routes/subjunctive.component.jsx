@@ -1,9 +1,8 @@
 import Article from "../components/article.component";
 
-const Subjunctive = () => {
+const Subjunctive = ({title}) => {
   return(
-    <Article>
-      <h4>Subjunctive</h4>
+    <Article title={title}>    
       <ul>
           <li>To say "I want to be rich" is literally "I want that I am rich": θέλω να είμαι πλούσιος. "I want to always speak Greek" is literally "I want that I speak always Greek.", so this phrase would be θέλω να μιλάω πάντα ελληνικά.</li>
           <li>You cannot avoid this "I want that I speak" structure. And when it's someone else who is wishing for something, you have to adjust accordingly. "He wants to be rich" translates to "He wants that he is rich," which is θέλει να είναι πλούσιος. Both verbs adjust: θέλω becomes θέλει, and είμαι becomes είναι. "You want to always speak Greek" is "you want that you speak always Greek," or θέλεις να μιλάς πάντα ελληνικά.</li>

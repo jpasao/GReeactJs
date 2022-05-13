@@ -1,9 +1,8 @@
 import Article from "../components/article.component";
 
-const Time = () => {
+const Time = ({title}) => {
   return(
-    <Article>
-      <h4>Telling Time</h4>
+    <Article title={title}>
       <p>To indicate the full hour, just say στις, as in στις πέντε ("at five o'clock"). You may want to add the word ακριβώς ("exactly") to mean "at five o'clock sharp."</p>
       <p>If it is some minutes after the full hour, simply use και, as in στις πέντε και δέκα ("at five-ten"). However, if it's approaching the next hour already, use παρά (minus), as in στις έξι παρά δέκα ("at ten to six" = "five-fifty").</p>
       <ul>

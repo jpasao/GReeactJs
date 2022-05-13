@@ -9,13 +9,14 @@ const Directory = () => {
     <Fragment>  
         <ul>    
         {sections.map((title) => {
-          const { name, route } = title;
+          const { route, component } = title;
+          const name = component.props.title;
           const props = {
             type: BUTTON_TYPES.navigation,
             content: name
           }
           return (
-            <li>
+            <li key={route}>
               <Link to={route}>
                 <Button buttonProps={props} />
               </Link>

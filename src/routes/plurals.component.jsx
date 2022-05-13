@@ -1,9 +1,8 @@
 import Article from "../components/article.component";
 
-const Plurals = () => {
+const Plurals = ({title}) => {
   return(
-    <Article>
-      <h4>Plural of -ος, -α, and -ο</h4>
+    <Article title={title}>      
       <p>In Greek, each flavor of noun gets a different ending for the plural:</p>
       <ul>
         <li>words ending in -ος change to -οι, as in δάσκαλοι and άνθρωποι</li>
