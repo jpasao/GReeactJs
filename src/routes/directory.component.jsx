@@ -5,6 +5,9 @@ import Button from "../components/button.component";
 import { BUTTON_TYPES } from "../resources/button-types";
 
 const Directory = () => {
+  // Scroll up with no animation when arriving to main page
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
   return (
     <Fragment>  
         <ul>    

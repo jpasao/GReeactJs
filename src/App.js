@@ -24,8 +24,7 @@ const App = () => {
       <ScrollButton />
       <footer>
         <p>Built with ReactJs, &#9829; and <a href='https://github.com/kevquirk/simple.css'>Simple.css</a></p>
-      </footer>  
-          
+      </footer>        
     </Fragment>
   );
 }

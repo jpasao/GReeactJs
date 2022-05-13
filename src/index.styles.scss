@@ -1,7 +1,17 @@
 $color-grey: #dcdcdc;
 $color-yellow: #ffb300;
 $color-yellow-light: #ffe8b4; 
-$color-orange: #ff7b00;
+$color-orange: #994a00;
+
+@font-face {
+  font-family: 'NotoSerif';
+  src: url('../public/NotoSerif-Regular.ttf');
+  unicode-range: U+03??;
+}
+
+body {
+  font-family: 'NotoSerif', -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;  
+}
 
 .navigation {  
   background-color: transparent;
@@ -31,16 +41,6 @@ main > ul li {
 
 article ul li {
   margin-bottom: 15px;
-}
-
-@font-face {
-  font-family: 'NotoSerif';
-  src: url('../public/NotoSerif-Regular.ttf');
-  unicode-range: U+03??;
-}
-
-body {
-  font-family: 'NotoSerif', -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;  
 }
 
 article em {

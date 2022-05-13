@@ -14,36 +14,38 @@ const Adjective = ({title}) => {
       </ul>
       <p>For μεγάλος you'll see ος, η, and ο, for masculine, feminine and the neuter, respectively. Very soon you will be able to predict which ending words will take.</p>
       <table>
-        <tr>
-          <td>Greek</td>
-          <td>English</td>
-          <td>Endings</td>
-        </tr>
-        <tr>
-          <td>μεγάλος</td>
-          <td><em>big, elder</em></td>
-          <td>ος, η, ο</td>
-        </tr>
-        <tr>
-          <td>όμορφος</td>
-          <td><em>beautiful</em></td>
-          <td>ος, η, ο</td>
-        </tr>
-        <tr>
-          <td>άσχημος</td>
-          <td><em>ugly, bad</em></td>
-          <td>ος, η, ο</td>
-        </tr>
-        <tr>
-          <td>αρχαίος</td>
-          <td><em>ancient</em></td>
-          <td>ος, α, ο</td>
-        </tr>
-        <tr>
-          <td>καινούριο</td>
-          <td><em>new</em></td>
-          <td>ος, α, ο</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>Greek</td>
+            <td>English</td>
+            <td>Endings</td>
+          </tr>
+          <tr>
+            <td>μεγάλος</td>
+            <td><em>big, elder</em></td>
+            <td>ος, η, ο</td>
+          </tr>
+          <tr>
+            <td>όμορφος</td>
+            <td><em>beautiful</em></td>
+            <td>ος, η, ο</td>
+          </tr>
+          <tr>
+            <td>άσχημος</td>
+            <td><em>ugly, bad</em></td>
+            <td>ος, η, ο</td>
+          </tr>
+          <tr>
+            <td>αρχαίος</td>
+            <td><em>ancient</em></td>
+            <td>ος, α, ο</td>
+          </tr>
+          <tr>
+            <td>καινούριο</td>
+            <td><em>new</em></td>
+            <td>ος, α, ο</td>
+          </tr>
+        </tbody>
       </table>
       <p>	Τι μεγάλος που είναι! is an expression like <em>Wow, how big it is!</em> Literally, you're saying <em>what big which it is</em></p>
       <p>	μου αρέσει να βλέπω και τα μουσεία. Here it doesn't mean <em>and</em> so much as <em>also</em>: <em>I like to see the museums also</em>.</p>

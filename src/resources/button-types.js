@@ -5,5 +5,5 @@ export const BUTTON_TYPES = {
 }
 
 export const BUTTON_TEXTS = {
-  backToIndex: 'Back to index'
+  backToIndex: '↜ back to index'
 }

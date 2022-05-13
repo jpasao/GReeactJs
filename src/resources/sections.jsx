@@ -5,6 +5,9 @@ import Imperative from "../routes/imperative.component";
 import Adjective from "../routes/adjective.component";
 import ThereIs from "../routes/there-is.component";
 import AccusativeWeak from "../routes/accusative-weak.component";
+import Adverbs from "../routes/adverb.component";
+import GenitiveWeak from "../routes/genitive-weak.component";
+import IndefiniteArticle from "../routes/indefinite-article.component";
 
 export const sections = [
   {  route: 'plurals', component: <Plurals title='Plural of -ος, -α, and -ο' /> },
@@ -14,9 +17,9 @@ export const sections = [
   {  route: 'adjective', component: <Adjective title='Adjective Endings (-ος, -η, -ο)' /> },
   {  route: 'there-is', component: <ThereIs title='υπάρχει / υπάρχουν and αρέσει / αρέσουν' /> },
   {  route: 'accusative-weak', component: <AccusativeWeak title='Accusative Weak Personal Pronouns' /> },
-  // {  route: 'advebs', component: <Adverbs title='Adjectives Versus Adverbs' /> },
-  // {  route: 'genitive-weak', component: <GenitiveWeak title='Genitive Weak Personal Pronouns' /> },
-  // {  route: 'indefinite-article', component: <IndefiniteArticle title='Use of the Indefinite Article in Modern Greek' /> },
+  {  route: 'advebs', component: <Adverbs title='Adjectives Versus Adverbs' /> },
+  {  route: 'genitive-weak', component: <GenitiveWeak title='Genitive Weak Personal Pronouns' /> },
+  {  route: 'indefinite-article', component: <IndefiniteArticle title='Use of the Indefinite Article in Modern Greek' /> },
   // {  route: 'numbers-in-nouns', component: <NumbersInNouns title='Numbers (Singular and Plural) in Nouns' /> },
   // {  route: 'genitive-case-of-nouns', component: <GenitiveCases title='Cases and Especially the Genitive Case of Nouns' /> },
   // {  route: 'vocative', component: <Vocative title='Vocative Case of Nouns' /> },
