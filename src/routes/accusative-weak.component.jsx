@@ -4,11 +4,13 @@ const AccusativeWeak = ({title}) => {
   return(
     <Article title={title}>      
       <table>
+        <thead>
+           <tr>
+            <th>Greek</th>
+            <th><em>English</em></th>          
+          </tr>         
+        </thead>
         <tbody>
-          <tr>
-            <td>Greek</td>
-            <td><em>English</em></td>          
-          </tr>
           <tr>
             <td>με</td>
             <td><em>me</em></td>

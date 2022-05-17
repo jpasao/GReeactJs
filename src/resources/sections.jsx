@@ -18,6 +18,8 @@ import ToHaveSecondAndThird from "../routes/to-have-second-and-third-person.comp
 import ToBePastTense from "../routes/to-be-past-tense.component";
 import ToHavePastTense from "../routes/to-have-past-tense.component";
 import PastTenses from "../routes/past-tenses.component";
+import DefiniteArticle from "../routes/definite-article.component";
+import Declensions from "../routes/declensions.component";
 
 export const sections = [
   {  route: 'plurals', component: <Plurals title='Plural of -ος, -α, and -ο' /> },
@@ -40,8 +42,8 @@ export const sections = [
   {  route: 'to-be-past-tense', component: <ToBePastTense title='Past Tense of the Verb είμαι' /> },
   {  route: 'to-have-past-tense', component: <ToHavePastTense title='είχα, the Past Tense of the Verb έχω' /> },
   {  route: 'past-tenses', component: <PastTenses title='Past Tense of Common Greek Verbs' /> },
-  // {  route: 'definite-article', component: <DefiniteArticle title='Definite Article of Nouns' /> },
-  // {  route: 'declensions', component: <Declensions title='Declensions' /> },
+  {  route: 'definite-article', component: <DefiniteArticle title='Definite Article of Nouns' /> },
+  {  route: 'declensions', component: <Declensions title='Declensions' /> },
   // {  route: 'comparative-degree', component: <ComparativeDegree title='Comparing Adjectives with the Comparative Degree' /> },
   // {  route: 'superlative-degree', component: <SuperlativeDegree title='Superlative Degree of Adjectives' /> },
 ];

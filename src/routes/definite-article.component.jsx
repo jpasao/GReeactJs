@@ -4,48 +4,48 @@ import Article from "../components/article.component";
 import { NUMBER_TYPE, CASE_TYPE } from "../resources/enum-types";
 import DropDown from "../components/drop-down.component";
 
-const IrregularAdjective = ({title}) => {
-  const polyForms = [
+const DefiniteArticle = ({title}) => {
+  const articles = [
     {
       caseType: CASE_TYPE.nominative,
-      masculine: 'ο πολύς',
-      feminine: 'η πολλή',
-      neuter: 'το πολύ',
+      masculine: 'ο',
+      feminine: 'η',
+      neuter: 'το',
       number: NUMBER_TYPE.singular
     },
     {
       caseType: CASE_TYPE.genitive,
-      masculine: 'του πολύ',
-      feminine: 'της πολλής',
-      neuter: 'του πολύ',
+      masculine: 'του',
+      feminine: 'της',
+      neuter: 'του',
       number: NUMBER_TYPE.singular
     },
     {
       caseType: CASE_TYPE.accusative,
-      masculine: 'τον πολύ',
-      feminine: 'την πολλή',
-      neuter: 'το πολύ',
+      masculine: 'τον',
+      feminine: 'την',
+      neuter: 'το',
       number: NUMBER_TYPE.singular
     },
     {
       caseType: CASE_TYPE.nominative,
-      masculine: 'οι πολλοί',
-      feminine: 'οι πολλές',
-      neuter: 'τα πολλά',
+      masculine: 'οι',
+      feminine: 'οι',
+      neuter: 'τα',
       number: NUMBER_TYPE.plural
     },
     {
       caseType: CASE_TYPE.genitive,
-      masculine: 'των πολλών',
-      feminine: 'των πολλών',
-      neuter: 'των πολλών',
+      masculine: 'των',
+      feminine: 'των',
+      neuter: 'των',
       number: NUMBER_TYPE.plural
     },
     {
       caseType: CASE_TYPE.accusative,
-      masculine: 'τους πολλούς',
-      feminine: 'τις πολλές',
-      neuter: 'τα πολλά',
+      masculine: 'τους',
+      feminine: 'τις ',
+      neuter: 'τα',
       number: NUMBER_TYPE.plural
     },
   ]
@@ -63,28 +63,29 @@ const IrregularAdjective = ({title}) => {
     setNumbers(numberChanged);
   }
 
-  const filteredPolyForms = polyForms
-    .filter((polyForm) => (
-      (polyForm.caseType === cases || cases === CASE_TYPE.all) &&
-      (polyForm.number === numbers || numbers === NUMBER_TYPE.all)
+  const filteredArticles = articles
+    .filter((art) => (
+      (art.caseType === cases || cases === CASE_TYPE.all) &&
+      (art.number === numbers || numbers === NUMBER_TYPE.all)
     ))
 
   return(
     <Article title={title}>      
-      <p>Like most adjectives, πολλοί has three genders and is declinable with three cases:</p>
       <h5>Choose options to filter the table:</h5>
       <DropDown label='Case' options={CASE_TYPE} onChangeHandler={onCaseChange} />
       <DropDown label='Number' options={NUMBER_TYPE} onChangeHandler={onNumberChange} />
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <td>CASE</td>
-            <td>NUMBER</td>
-            <td>MASCULINE</td>
-            <td>FEMININE</td>
-            <td>NEUTER</td>
+            <th>Case</th>
+            <th>Number</th>
+            <th>Masculine</th>
+            <th>Feminine</th>
+            <th>Neuter</th>
           </tr>
-          {filteredPolyForms.map((polyForm) => {
+        </thead>
+        <tbody>
+          {filteredArticles.map((polyForm) => {
             const { caseType, masculine, feminine, neuter, number } = polyForm
             return (
               <tr key={ masculine }>
@@ -97,9 +98,9 @@ const IrregularAdjective = ({title}) => {
             )
           })}
         </tbody>
-      </table>     
+      </table>   
     </Article>
   )
 }
 
-export default IrregularAdjective
+export default DefiniteArticle

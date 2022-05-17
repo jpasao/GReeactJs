@@ -1,131 +1,177 @@
+import { useState } from "react";
+
 import Article from "../components/article.component";
+import { GENDER_TYPE } from "../resources/enum-types";
+import DropDown from "../components/drop-down.component";
 
 const Accusative = ({title}) => {
+  const nouns = [
+    {
+      gender: GENDER_TYPE.masculine,
+      termination: 'Masculine in -ος',
+      nominative: 'ο γιατρός',
+      accusative: 'τον γιατρό',
+      english: 'the doctor'
+    },
+    {
+      gender: GENDER_TYPE.masculine,
+      termination: 'Masculine in -ας',
+      nominative: 'ο παπάς',
+      accusative: 'τον παπά',
+      english: 'the priest'
+    },
+    {
+      gender: GENDER_TYPE.masculine,
+      termination: 'Masculine in -ης	',
+      nominative: 'ο Θανάσης',
+      accusative: 'τον Θανάση',
+      english: 'Thanasis'
+    },
+    {
+      gender: GENDER_TYPE.feminine,
+      termination: 'Feminine in -α',
+      nominative: 'η νοσοκόμα',
+      accusative: 'τη νοσοκόμα',
+      english: 'the nurse'
+    },
+    {
+      gender: GENDER_TYPE.feminine,
+      termination: 'Feminine in -η',
+      nominative: 'η ειρήνη',
+      accusative: 'την ειρήνη',
+      english: 'peace'
+    },
+    {
+      gender: GENDER_TYPE.neuter,
+      termination: 'Neuter in -ο',
+      nominative: 'το ρούχο',
+      accusative: 'το ρούχο',
+      english: 'the cloth'
+    },
+    {
+      gender: GENDER_TYPE.neuter,
+      termination: 'Neuter in -α',
+      nominative: 'το δίπλωμα',
+      accusative: 'το δίπλωμα',
+      english: 'the diploma'
+    },
+    {
+      gender: GENDER_TYPE.neuter,
+      termination: 'Neuter in -oς',
+      nominative: 'το μήκος',
+      accusative: 'το μήκος',
+      english: 'the length'
+    },
+    {
+      gender: GENDER_TYPE.neuter,
+      termination: 'Neuter in -ες',
+      nominative: 'to συνεχές',
+      accusative: 'to συνεχές',
+      english: 'the continuum'
+    },
+    {
+      gender: GENDER_TYPE.neuter,
+      termination: 'Neuter in -ι',
+      nominative: 'το σπίτι',
+      accusative: 'το σπίτι',
+      english: 'the house'
+    },
+    {
+      gender: GENDER_TYPE.neuter,
+      termination: 'Neuter in -ας',
+      nominative: 'το τέρας',
+      accusative: 'το τέρας',
+      english: 'the monster'
+    },
+    {
+      gender: GENDER_TYPE.neuter,
+      termination: 'Neuter in -ως',
+      nominative: 'το καθεστώς',
+      accusative: 'το καθεστώς',
+      english: 'the regime'
+    },    
+  ]
+
+  const [gender, setGender] = useState(GENDER_TYPE.all)
+
+  const onGenderChange = (event) => {
+    const genderChanged = event.target.value;
+    setGender(genderChanged);
+  }
+
+  const filteredNouns = nouns 
+    .filter((noun) => noun.gender === gender || gender === GENDER_TYPE.all)
+
   return(
     <Article title={title}>  
-          <table>
-            <tbody>
-              <tr>
-                <td>GENDER</td>
-                <td>NOMINATIVE</td>
-                <td>ACCUSATIVE</td>
-                <td><em>ENGLISH</em></td>
-              </tr>
-              <tr>
-                <td>Masculine in -ος</td>
-                <td>ο γιατρός</td>
-                <td>τον γιατρό</td>
-                <td><em>the doctor</em></td>
-              </tr>
-              <tr>
-                <td>Masculine in -ας</td>
-                <td>ο παπάς</td>
-                <td>τον παπά</td>
-                <td><em>the priest</em></td>
-              </tr>
-              <tr>
-                <td>Masculine in -ης</td>
-                <td>ο Θανάσης</td>
-                <td>τον Θανάση</td>
-                <td><em>Thanasis</em></td>
-              </tr>
-              <tr>
-                <td>Feminine in -α</td>
-                <td>η νοσοκόμα</td>
-                <td>τη νοσοκόμα</td>
-                <td><em>the nurse</em></td>
-              </tr>
-              <tr>
-                <td>Feminine in -η</td>
-                <td>η ειρήνη</td>
-                <td>την ειρήνη</td>
-                <td><em>peace</em></td>
-              </tr>
-              <tr>
-                <td>Neuter in -ο</td>
-                <td>το ρούχο</td>
-                <td>το ρούχο</td>
-                <td><em>the cloth</em></td>
-              </tr>
-              <tr>
-                <td>Neuter in -α</td>
-                <td>το δίπλωμα</td>
-                <td>το δίπλωμα</td>
-                <td><em>the diploma</em></td>
-              </tr>
-              <tr>
-                <td>Neuter in -oς</td>
-                <td>το μήκος</td>
-                <td>το μήκος</td>
-                <td><em>the length</em></td>
-              </tr>
-              <tr>
-                <td>Neuter in -ες</td>
-                <td>to συνεχές</td>
-                <td>το συνεχές</td>
-                <td><em>the continuum</em></td>
-              </tr>
-              <tr>
-                <td>Neuter in -ι</td>
-                <td>το σπίτι</td>
-                <td>το σπίτι</td>
-                <td><em>the house</em></td>
-              </tr>
-              <tr>
-                <td>Neuter in -ας</td>
-                <td>το τέρας</td>
-                <td>το τέρας</td>
-                <td><em>the monster</em></td>
-              </tr>
-              <tr>
-                <td>Neuter in -ως</td>
-                <td>το καθεστώς</td>
-                <td>το καθεστώς</td>
-                <td><em>the regime</em></td>
-              </tr>
-            </tbody>
-          </table>
-          <p>Only the masculine nouns change from the nominative to the accusative, and basically what happens is that they drop the final -ς, which is always present in masculine-gendered nouns</p>
-          <p>The following table has the changes from the nominative to the accusative case in the articles</p>
-          <table>
-            <tbody>
-              <tr>
-                <td>CASE</td>
-                <td>NOMINATIVE</td>
-                <td></td>
-                <td>ACCUSATIVE</td>
-                <td></td>
-              </tr> 
-              <tr>
-                <td></td>
-                <td>Definite</td>
-                <td>Indefinite</td>
-                <td>Definite</td>
-                <td>Indefinite</td>
-              </tr> 
-              <tr>
-                <td>Masculine</td>
-                <td>ο</td>
-                <td>ένας</td>
-                <td>τον</td>
-                <td>έναν</td>
-              </tr> 
-              <tr>
-                <td>Feminine</td>
-                <td>η</td>
-                <td>μία</td>
-                <td>τη / την</td>
-                <td>μία</td>
-              </tr> 
-              <tr>
-                <td>Neuter</td>
-                <td>το</td>
-                <td>ένα</td>
-                <td>το</td>
-                <td>ένα</td>
-              </tr>          
-            </tbody>
-          </table>              
+      <h5>Choose options to filter the table:</h5>
+      <DropDown label='Gender' options={GENDER_TYPE} onChangeHandler={onGenderChange} />
+      <table>
+        <thead>
+          <tr>
+            <th>Gender</th>
+            <th>Nominative</th>
+            <th>Accusative</th>
+            <th><em>English</em></th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredNouns.map((noun) => {
+            const { termination, nominative, accusative, english } = noun
+            return (
+              <tr key={ nominative }>
+                <td>{termination}</td>
+                <td>{nominative}</td>
+                <td>{accusative}</td>
+                <td><em>{english}</em></td>
+              </tr>              
+            )
+          })}             
+        </tbody>
+      </table>
+      <p>Only the masculine nouns change from the nominative to the accusative, and basically what happens is that they drop the final -ς, which is always present in masculine-gendered nouns</p>
+      <p>The following table has the changes from the nominative to the accusative case in the articles</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Case</th>
+            <th>Nominative</th>
+            <th></th>
+            <th>Accusative</th>
+            <th></th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>Definite</td>
+            <td>Indefinite</td>
+            <td>Definite</td>
+            <td>Indefinite</td>
+          </tr> 
+          <tr>
+            <td>Masculine</td>
+            <td>ο</td>
+            <td>ένας</td>
+            <td>τον</td>
+            <td>έναν</td>
+          </tr> 
+          <tr>
+            <td>Feminine</td>
+            <td>η</td>
+            <td>μία</td>
+            <td>τη / την</td>
+            <td>μία</td>
+          </tr> 
+          <tr>
+            <td>Neuter</td>
+            <td>το</td>
+            <td>ένα</td>
+            <td>το</td>
+            <td>ένα</td>
+          </tr>          
+        </tbody>
+      </table>              
     </Article>
   )
 }

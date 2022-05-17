@@ -14,12 +14,14 @@ const Adjective = ({title}) => {
       </ul>
       <p>For μεγάλος you'll see ος, η, and ο, for masculine, feminine and the neuter, respectively. Very soon you will be able to predict which ending words will take.</p>
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <td>Greek</td>
-            <td>English</td>
-            <td>Endings</td>
+            <th>Greek</th>
+            <th>English</th>
+            <th>Endings</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>μεγάλος</td>
             <td><em>big, elder</em></td>

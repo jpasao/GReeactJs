@@ -5,11 +5,13 @@ const GenitiveWeak = ({title}) => {
     <Article title={title}>      
       <p>Used when English would say <em>to me</em>, <em>to you</em>, <em>to us</em>, or the like</p>
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <td>GREEK</td>
-            <td><em>ENGLISH</em></td>
+            <th>GREEK</th>
+            <th><em>ENGLISH</em></th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>μου</td>
             <td><em>my / to me</em></td>

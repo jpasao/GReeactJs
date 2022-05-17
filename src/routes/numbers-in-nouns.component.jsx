@@ -1,91 +1,137 @@
+import { useState } from "react";
+
 import Article from "../components/article.component";
+import { GENDER_TYPE } from "../resources/enum-types";
+import DropDown from "../components/drop-down.component";
 
 const NumbersInNouns = ({title}) => {
+  const nouns = [
+    {
+      singular: 'ο άντρας',
+      plural: 'οι άντρες',
+      english: 'the man',
+      gender: GENDER_TYPE.masculine
+    },
+    {
+      singular: 'ο πατέρας',
+      plural: 'οι πατέρες',
+      english: 'the father',
+      gender: GENDER_TYPE.masculine
+    },
+    {
+      singular: 'ο υπολογιστής',
+      plural: 'οι υπολογιστές',
+      english: 'the computer',
+      gender: GENDER_TYPE.masculine
+    },
+    {
+      singular: 'ο τοίχος',
+      plural: 'οι τοίχοι',
+      english: 'the wall',
+      gender: GENDER_TYPE.masculine
+    },
+    {
+      singular: 'ο δρόμος',
+      plural: 'οι δρόμοι',
+      english: 'the street',
+      gender: GENDER_TYPE.masculine
+    },
+    {
+      singular: 'η γυναίκα',
+      plural: 'οι γυναίκες',
+      english: 'the woman',
+      gender: GENDER_TYPE.feminine
+    },
+    {
+      singular: 'η πόρτα',
+      plural: 'οι πόρτες',
+      english: 'the door',
+      gender: GENDER_TYPE.feminine
+    },
+    {
+      singular: 'η μητέρα',
+      plural: 'οι μητέρες',
+      english: 'the mother',
+      gender: GENDER_TYPE.feminine
+    },
+    {
+      singular: 'η οθόνη',
+      plural: 'οι οθόνες',
+      english: 'the screen',
+      gender: GENDER_TYPE.feminine
+    },
+    {
+      singular: 'η λεωφόρος',
+      plural: 'οι λεωφόροι',
+      english: 'the avenue',
+      gender: GENDER_TYPE.feminine
+    },
+    {
+      singular: 'το παιδί',
+      plural: 'τα παιδιά',
+      english: 'the child',
+      gender: GENDER_TYPE.neuter
+    },
+    {
+      singular: 'το εγγόνι',
+      plural: 'τα εγγόνια',
+      english: 'the grandchild',
+      gender: GENDER_TYPE.neuter
+    },
+    {
+      singular: 'το ποντίκι',
+      plural: 'τα ποντίκια',
+      english: 'the mouse',
+      gender: GENDER_TYPE.neuter
+    },
+    {
+      singular: 'το παράθυρο',
+      plural: 'τα παράθυρα',
+      english: 'the window',
+      gender: GENDER_TYPE.neuter
+    },
+    {
+      singular: 'το αυτοκίνητο',
+      plural: 'τα αυτοκίνητα',
+      english: 'the car',
+      gender: GENDER_TYPE.neuter
+    }    
+  ]
+
+  const [gender, setGender] = useState(GENDER_TYPE.all)
+
+  const onGenderChange = (event) => {
+    const genderChanged = event.target.value;
+    setGender(genderChanged);
+  }
+
+  const filteredNouns = nouns 
+    .filter((noun) => noun.gender === gender || gender === GENDER_TYPE.all)
+
   return(
     <Article title={title}>      
       <p>In the plural, the word μήνας becomes μήνες meaning <em>months</em>, which is a modification of the word's last syllable</p>
+      <h5>Choose options to filter the table:</h5>
+      <DropDown label='Gender' options={GENDER_TYPE} onChangeHandler={onGenderChange} />
       <table>
+        <thead>
+          <tr>
+            <th>Singular</th>
+            <th>Plural</th>
+            <th><em>English</em></th>
+          </tr>
+        </thead>
         <tbody>
-          <tr>
-            <td>Singular</td>
-            <td>Plural</td>
-            <td><em>English</em></td>
-          </tr>
-          <tr>
-            <td>ο άντρας (m.)</td>
-            <td>οι άντρες</td>
-            <td><em>the man</em></td>
-          </tr>
-          <tr>
-            <td>ο πατέρας (m.)</td>
-            <td>οι πατέρες</td>
-            <td><em>the father</em></td>
-          </tr>
-          <tr>
-            <td>ο υπολογιστής (m.)</td>
-            <td>οι υπολογιστές</td>
-            <td><em>the computer</em></td>
-          </tr>
-          <tr>
-            <td>ο τοίχος (m.)</td>
-            <td>οι τοίχοι</td>
-            <td><em>the wall</em></td>
-          </tr>
-          <tr>
-            <td>ο δρόμος (m.)</td>
-            <td>οι δρόμοι</td>
-            <td><em>the street</em></td>
-          </tr>
-          <tr>
-            <td>η γυναίκα (f.)</td>
-            <td>οι γυναίκες</td>
-            <td><em>the woman</em></td>
-          </tr>
-          <tr>
-            <td>η πόρτα (f.)</td>
-            <td>οι πόρτες</td>
-            <td><em>the door</em></td>
-          </tr>
-          <tr>
-            <td>η μητέρα (f.)</td>
-            <td>οι μητέρες</td>
-            <td><em>the mother</em></td>
-          </tr>
-          <tr>
-            <td>η οθόνη (f.)</td>
-            <td>οι οθόνες</td>
-            <td><em>the screen</em></td>
-          </tr>
-          <tr>
-            <td>η λεωφόρος (f.)</td>
-            <td>οι λεωφόροι</td>
-            <td><em>the avenue</em></td>
-          </tr>
-          <tr>
-            <td>το παιδί (n.)</td>
-            <td>τα παιδιά</td>
-            <td><em>the child</em></td>
-          </tr>
-          <tr>
-            <td>το εγγόνι (n.)</td>
-            <td>τα εγγόνια</td>
-            <td><em>the grandchild</em></td>
-          </tr>
-          <tr>
-            <td> το ποντίκι (n.)</td>
-            <td>τα ποντίκια</td>
-            <td><em>the mouse</em></td>
-          </tr>
-          <tr>
-            <td>το παράθυρο (n.)</td>
-            <td>τα παράθυρα</td>
-            <td><em>the window</em></td>
-          </tr>
-          <tr>
-            <td>το αυτοκίνητο (n.)</td>
-            <td>τα αυτοκίνητα</td>
-            <td><em>the car</em></td>
-          </tr>
+          {filteredNouns.map((noun) => {
+            const { singular, plural, english } = noun
+            return (
+              <tr key={singular}>
+                <td>{singular}</td>
+                <td>{plural}</td>
+                <td><em>{english}</em></td>
+              </tr>              
+            )
+          })}          
         </tbody>
       </table>
     </Article>

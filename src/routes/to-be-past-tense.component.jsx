@@ -23,12 +23,14 @@ const ToBePastTense = ({title}) => {
       </dl>
       <p>The conjugation of the verb is in the table that follows:</p>
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <td>Case</td>
-            <td>Greek</td>
-            <td><em>English</em></td>
+            <th>Case</th>
+            <th>Greek</th>
+            <th><em>English</em></th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>Singular</td>
             <td></td>
