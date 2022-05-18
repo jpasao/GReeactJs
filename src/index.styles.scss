@@ -1,7 +1,13 @@
-$color-grey: #dcdcdc;
-$color-yellow: #ffb300;
-$color-yellow-light: #ffe8b4; 
-$color-orange: #994a00;
+$dark-theme-blue: #003678;
+$dark-theme-blue-accent: #b4d5ff; 
+$dark-theme-grey: #dcdcdc;
+
+$light-theme-blue: #346cc0;
+$light-theme-blue-accent: #6190ff;
+$light-theme-grey: #a6a6a6;
+
+$green-background: #61ffb04a;
+$blue-background: #61abff4a;
 
 @font-face {
   font-family: 'NotoSerif';
@@ -15,39 +21,81 @@ body {
 
 .navigation {  
   background-color: transparent;
-  border: 3px solid $color-yellow;
-  color: $color-grey;
+  border: 3px solid $dark-theme-blue;
+  color: $dark-theme-grey;
 }
 
 .back {
   background-color: transparent;
-  border: 3px solid $color-orange;
-  color: $color-grey;
+  border: 3px solid $dark-theme-blue;
+  color: $dark-theme-grey;
 }
 
 .scroll {
   background-color: transparent;
   border: none;
-  color: $color-grey;
+  color: $dark-theme-grey;
   position: fixed;
   right: 1vh;
   bottom: 0;
   font-size: 3rem;
 }
 
+a, a:visited {
+  color: $dark-theme-blue-accent;
+}
+
 main > ul li {
   list-style-type: lower-greek;    
 }
 
-article ul li {
-  margin-bottom: 15px;
+article {
+  ul li {
+    margin-bottom: 15px;
+  }
+  em {
+    font-style: normal;
+    color: $dark-theme-blue-accent;
+  }
+  input[type='checkbox']{
+    margin-left: 20px;    
+    &:checked{
+      background-color: $dark-theme-blue-accent;
+    }
+  }
+  span.par{
+    background-color: $blue-background;
+  }
+  span.impar{
+    background-color: $green-background;
+  }
 }
 
-article em {
-  font-style: normal;
-  color: $color-yellow-light;
-}
+@media (prefers-color-scheme: light) {
+  article {
+    em {    
+      color: $light-theme-blue-accent;
+    }
+    input[type='checkbox']{      
+      &:checked{
+        background-color: $light-theme-blue-accent;
+      }
+    }
+  }
 
-article input[type='checkbox']{
-  margin-left: 20px;
+  a, a:visited {
+    color: $light-theme-blue-accent;
+  }
+
+  .back, .navigation {    
+    border: 3px solid $light-theme-blue;
+    &:hover {
+      border: 3px solid $light-theme-blue-accent;      
+      filter: none !important;
+    }
+  }
+
+  .scroll, .back, .navigation {
+    color: $light-theme-grey;
+  }
 }

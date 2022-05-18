@@ -76,14 +76,16 @@ const IrregularAdjective = ({title}) => {
       <DropDown label='Case' options={CASE_TYPE} onChangeHandler={onCaseChange} />
       <DropDown label='Number' options={NUMBER_TYPE} onChangeHandler={onNumberChange} />
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <td>CASE</td>
-            <td>NUMBER</td>
-            <td>MASCULINE</td>
-            <td>FEMININE</td>
-            <td>NEUTER</td>
+            <th>Case</th>
+            <th>Number</th>
+            <th>Masculine</th>
+            <th>Feminine</th>
+            <th>Neuter</th>
           </tr>
+        </thead>
+        <tbody>
           {filteredPolyForms.map((polyForm) => {
             const { caseType, masculine, feminine, neuter, number } = polyForm
             return (

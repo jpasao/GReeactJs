@@ -9,7 +9,7 @@ const Adverbs = ({title}) => {
       <dl>
         <dt>Adjective</dt>
         <dd>      
-          <table>
+          <table>            
             <tbody>
               <tr>
                 <td>Το γρήγορο καράβι</td>

@@ -20,6 +20,8 @@ import ToHavePastTense from "../routes/to-have-past-tense.component";
 import PastTenses from "../routes/past-tenses.component";
 import DefiniteArticle from "../routes/definite-article.component";
 import Declensions from "../routes/declensions.component";
+import ComparativeDegree from "../routes/comparative-degree.component";
+import SuperlativeDegree from "../routes/superlative-degree.comonent";
 
 export const sections = [
   {  route: 'plurals', component: <Plurals title='Plural of -ος, -α, and -ο' /> },
@@ -44,6 +46,6 @@ export const sections = [
   {  route: 'past-tenses', component: <PastTenses title='Past Tense of Common Greek Verbs' /> },
   {  route: 'definite-article', component: <DefiniteArticle title='Definite Article of Nouns' /> },
   {  route: 'declensions', component: <Declensions title='Declensions' /> },
-  // {  route: 'comparative-degree', component: <ComparativeDegree title='Comparing Adjectives with the Comparative Degree' /> },
-  // {  route: 'superlative-degree', component: <SuperlativeDegree title='Superlative Degree of Adjectives' /> },
+  {  route: 'comparative-degree', component: <ComparativeDegree title='Comparing Adjectives with the Comparative Degree' /> },
+  {  route: 'superlative-degree', component: <SuperlativeDegree title='Superlative Degree of Adjectives' /> },
 ];

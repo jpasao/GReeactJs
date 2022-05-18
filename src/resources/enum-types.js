@@ -31,3 +31,9 @@ export const PERSON_TYPE = {
   secondPlural: 'εσείς',
   thirdPlural: 'αυτοί / αυτές / αυτά',
 }
+export const ADJECTIVE_TYPE = {
+  all: all,
+  positive: 'positive',
+  comparative: 'comparative',
+  superlative: 'superlative'
+}
