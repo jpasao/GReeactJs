@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import ScrollButton from "./components/scroll-button.component";
 import Directory from "./routes/directory.component";
 import { sections } from "./resources/sections";
@@ -10,6 +10,7 @@ const App = () => {
       <header>
         <h1>GreeactJs</h1>
         <p>Modern Greek pills on ReactJs</p>
+        <small><Link to='/landing'>return to index</Link></small>
       </header>      
       <main>
         <Routes>

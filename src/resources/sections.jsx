@@ -22,6 +22,7 @@ import DefiniteArticle from "../routes/definite-article.component";
 import Declensions from "../routes/declensions.component";
 import ComparativeDegree from "../routes/comparative-degree.component";
 import SuperlativeDegree from "../routes/superlative-degree.comonent";
+import Landing from "../routes/landing";
 
 export const sections = [
   {  route: 'plurals', component: <Plurals title='Plural of -ος, -α, and -ο' /> },
@@ -48,4 +49,5 @@ export const sections = [
   {  route: 'declensions', component: <Declensions title='Declensions' /> },
   {  route: 'comparative-degree', component: <ComparativeDegree title='Comparing Adjectives with the Comparative Degree' /> },
   {  route: 'superlative-degree', component: <SuperlativeDegree title='Superlative Degree of Adjectives' /> },
+  {  route: '/*', component: <Landing title='Choose what do you want to do:' /> } 
 ];

@@ -45,6 +45,10 @@ a, a:visited {
   color: $dark-theme-blue-accent;
 }
 
+button:enabled:hover {
+  background-color: var(--accent-bg);
+}
+
 main > ul li {
   list-style-type: lower-greek;    
 }
