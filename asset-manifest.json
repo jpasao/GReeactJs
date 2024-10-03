@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/GReeactJs/static/css/main.6f82bba3.css",
+    "main.js": "/GReeactJs/static/js/main.a13222a4.js",
+    "static/js/787.dcaadec3.chunk.js": "/GReeactJs/static/js/787.dcaadec3.chunk.js",
+    "static/media/NotoSerif-Regular.ttf": "/GReeactJs/static/media/NotoSerif-Regular.f137c7ae4fdb27744a29.ttf",
+    "index.html": "/GReeactJs/index.html",
+    "main.6f82bba3.css.map": "/GReeactJs/static/css/main.6f82bba3.css.map",
+    "main.a13222a4.js.map": "/GReeactJs/static/js/main.a13222a4.js.map",
+    "787.dcaadec3.chunk.js.map": "/GReeactJs/static/js/787.dcaadec3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f82bba3.css",
+    "static/js/main.a13222a4.js"
+  ]
+}
