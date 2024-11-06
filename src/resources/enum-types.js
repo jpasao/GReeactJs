@@ -8,7 +8,8 @@ export const CASE_TYPE = {
   all: all,
   nominative: 'nominative',
   genitive: 'genitive',
-  accusative: 'accusative'
+  accusative: 'accusative',
+  vocative: 'vocative'
 }
 export const ARTICLE_TYPE = {
   all: all,
@@ -31,9 +32,23 @@ export const PERSON_TYPE = {
   secondPlural: 'εσείς',
   thirdPlural: 'αυτοί / αυτές / αυτά',
 }
+export const PERSON_TYPES = {
+  first: 'first',
+  second: 'second',
+  third: 'third'
+}
+export const CLASS_TYPE = {
+  first: 'first',
+  second: 'second'
+}
 export const ADJECTIVE_TYPE = {
   all: all,
   positive: 'positive',
   comparative: 'comparative',
   superlative: 'superlative'
+}
+export const ACCENT_TYPE = {
+  oxytone: 'oxytone',
+  paroxytone: 'paroxytone',
+  proparoxytone: 'proparoxytone'
 }

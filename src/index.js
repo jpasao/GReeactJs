@@ -8,7 +8,8 @@ const mainRouter = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: sections.map((section) => {
+    children: sections    
+    .map((section) => {
       return { path: section.route, element: section.component }
     })
   }

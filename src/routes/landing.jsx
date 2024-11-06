@@ -6,7 +6,7 @@ const Landing = ({ title }) => {
     <Article title={title}>      
       <ul>
         <li><Link to='/'>Check pills</Link></li>
-        <li>Take a quiz (soon)</li>
+        <li><Link to='quiz'>Take a quiz</Link></li>
       </ul>
     </Article>
   )

@@ -11,7 +11,9 @@ const Directory = () => {
   return (
     <Fragment>  
         <ul>    
-        {sections.map((title) => {
+        {sections
+        .filter(section => section.show)
+        .map((title) => {
           const { route, component } = title;
           const name = component.props.title;
           const props = {

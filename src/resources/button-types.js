@@ -5,5 +5,8 @@ export const BUTTON_TYPES = {
 }
 
 export const BUTTON_TEXTS = {
-  backToIndex: '↜ back to pills'
+  backToIndex: '↜ back to pills',
+  nextQuestion: 'Next question',
+  beginQuiz: 'Begin quiz',
+  checkAnswer: 'Check answer'
 }
