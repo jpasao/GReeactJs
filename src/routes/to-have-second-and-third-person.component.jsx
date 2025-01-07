@@ -102,7 +102,7 @@ const ToHaveSecondAndThird = ({title}) => {
     ))    
 
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>We translate σου and δικά σας as <em>your</em>. The word σου (and σας) are personal pronouns appearing here in their "weak" form (there is also a "strong" form, which we use when we want to add emphasis or make a distinction).</p>
       <p>We use this weak form in Greek to form possessive pronouns ("my," "your," etc.) as follows:</p>
       
@@ -147,11 +147,11 @@ const ToHaveSecondAndThird = ({title}) => {
                       <td>{ number }</td>
                       <td>{ first }</td>
                       <td>{ second }</td>
-                    </tr> 
+                    </tr>
                   )
-                })}       
+                })}
             </tbody>
-          </table>           
+          </table>
         </dd>
       </dl>
       <dl>
@@ -178,11 +178,11 @@ const ToHaveSecondAndThird = ({title}) => {
                       <td>{ masculine }</td>
                       <td>{ feminine }</td>
                       <td>{ neuter }</td>
-                    </tr> 
+                    </tr>
                   )
-                })}      
+                })}
             </tbody>
-          </table>           
+          </table>
         </dd>
       </dl>
       <p>So when we want to say <em>my books</em>, we will use the first person singular genitive pronoun from the above, τα βιβλία μου, and when we want to say <em>her car</em>, we will say το αυτοκίνητό της - third person, feminine, genitive singular.</p>

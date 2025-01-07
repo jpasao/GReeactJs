@@ -2,12 +2,12 @@ import Article from "../components/article.component";
 
 const AccusativeWeak = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <table>
         <thead>
            <tr>
             <th>Greek</th>
-            <th><em>English</em></th>          
+            <th><em>English</em></th>
           </tr>         
         </thead>
         <tbody>

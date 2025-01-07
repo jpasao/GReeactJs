@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const ToHaveFirstPerson = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>The perfect or present perfect (Greek: παρακείμενος):</p>
       <dl>
         <dt>For Example:</dt>

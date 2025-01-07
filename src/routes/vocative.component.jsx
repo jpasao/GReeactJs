@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const Plurals = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <ul>
         <li>If the masculine noun ends in - ος, the ending becomes -ε</li>
         <li>If the masculine noun ends in - ης, the ending becomes -η</li>

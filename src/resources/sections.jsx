@@ -21,7 +21,7 @@ import PastTenses from "../routes/past-tenses.component";
 import DefiniteArticle from "../routes/definite-article.component";
 import Declensions from "../routes/declensions.component";
 import ComparativeDegree from "../routes/comparative-degree.component";
-import SuperlativeDegree from "../routes/superlative-degree.comonent";
+import SuperlativeDegree from "../routes/superlative-degree.component";
 import Landing from "../routes/landing";
 import Quiz from "../routes/quiz.component";
 
@@ -51,5 +51,5 @@ export const sections = [
   {  route: 'comparative-degree', component: <ComparativeDegree title='Comparing Adjectives with the Comparative Degree' />, show: true },
   {  route: 'superlative-degree', component: <SuperlativeDegree title='Superlative Degree of Adjectives' />, show: true },
   {  route: 'quiz', component: <Quiz title='Take a quiz:' />, show: false },
-  {  route: '/*', component: <Landing title='Choose what do you want to do:' />, show: false },   
+  {  route: '/*', component: <Landing title='Choose what do you want to do:' />, show: false },
 ];

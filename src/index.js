@@ -8,12 +8,12 @@ const mainRouter = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    children: sections    
-    .map((section) => {
-      return { path: section.route, element: section.component }
-    })
+    children: sections
+      .map((section) => {
+        return { path: section.route, element: section.component }
+      })
   }
 ])
 createRoot(document.getElementById('root')).render(
-  <RouterProvider router={mainRouter} /> 
+  <RouterProvider router={mainRouter} />
 );

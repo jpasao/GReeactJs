@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const ThereIs = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>In Greek, each flavor of noun gets a different ending for the plural:</p> 
       <ul>
         <li>Υπάρχει used in the singular means <em>there is</em> or <em>it exists</em></li>

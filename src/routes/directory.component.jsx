@@ -9,8 +9,8 @@ const Directory = () => {
   window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
   return (
-    <Fragment>  
-        <ul>    
+    <Fragment>
+        <ul>
         {sections
         .filter(section => section.show)
         .map((title) => {
@@ -27,7 +27,7 @@ const Directory = () => {
               </Link>
             </li>)
         })} 
-        </ul>     
+        </ul>
     </Fragment>
   )
 }

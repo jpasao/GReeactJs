@@ -70,7 +70,7 @@ const IrregularAdjective = ({title}) => {
     ))
 
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>Like most adjectives, πολλοί has three genders and is declinable with three cases:</p>
       <h5>Choose options to filter the table:</h5>
       <DropDown label='Case' options={CASE_TYPE} onChangeHandler={onCaseChange} />
@@ -95,7 +95,7 @@ const IrregularAdjective = ({title}) => {
                 <td>{ masculine }</td>
                 <td>{ feminine }</td>
                 <td>{ neuter }</td>
-              </tr>              
+              </tr>
             )
           })}
         </tbody>

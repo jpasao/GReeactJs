@@ -8,8 +8,8 @@ const Adverbs = ({title}) => {
       <p>The ending of adverbs never changes, so they are much easier to deal with.</p>
       <dl>
         <dt>Adjective</dt>
-        <dd>      
-          <table>            
+        <dd>
+          <table>
             <tbody>
               <tr>
                 <td>Το γρήγορο καράβι</td>
@@ -32,7 +32,7 @@ const Adverbs = ({title}) => {
                 <td>Πάμε γρήγορα</td>
               </tr>
               <tr>
-                <td><em>Let's go quickly</em></td>          
+                <td><em>Let's go quickly</em></td>
               </tr>
             </tbody>
           </table>
@@ -52,7 +52,7 @@ const Adverbs = ({title}) => {
                 <td><em>The lesson is easy</em></td>
               </tr>
             </tbody>
-          </table>          
+          </table>
         </dd>
       </dl>
       <dl>
@@ -64,10 +64,10 @@ const Adverbs = ({title}) => {
                 <td>Πηγαίνεις εύκολα</td>       
               </tr>
               <tr>
-                <td><em>You can easily get there</em></td>         
+                <td><em>You can easily get there</em></td>
               </tr>
             </tbody>
-          </table>          
+          </table>
         </dd>
       </dl> 
       <dl>
@@ -99,7 +99,7 @@ const Adverbs = ({title}) => {
             </tbody>
           </table>
         </dd>
-      </dl>   
+      </dl>
     </Article>
   )
 }

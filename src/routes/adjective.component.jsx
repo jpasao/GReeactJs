@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const Adjective = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>The feminine forms of adjectives can follow the pattern of words like γυναίκα, but there is also a second pattern that they could follow, based on the ending -η and mirroring feminine nouns like πόλη.</p>
       <p> This leads to phrases where the adjective and the noun suddenly don't have the same ending anymore, like η αρχαία πόλη or η όμορφη γυναικα.</p>
       <p>So when you're learning a new adjective like μεγάλος, you have to memorize whether the feminine form will end in -α or -η.</p>

@@ -169,9 +169,9 @@ const Accusative = ({title}) => {
             <td>ένα</td>
             <td>το</td>
             <td>ένα</td>
-          </tr>          
+          </tr>
         </tbody>
-      </table>              
+      </table>
     </Article>
   )
 }

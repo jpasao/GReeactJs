@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const ToBePastTense = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>Past continuous (something was happening in the past, was in progress, or was happening repeatedly)</p>
       <dl>
         <dt>For Example:</dt>
@@ -70,9 +70,9 @@ const ToBePastTense = ({title}) => {
             <td>Third person</td>
             <td>αυτοί / αυτές / αυτά ήταν(ε)</td>
             <td><em>they were</em></td>
-          </tr>          
+          </tr>
           </tbody>
-      </table>          
+      </table>
     </Article>
   )
 }

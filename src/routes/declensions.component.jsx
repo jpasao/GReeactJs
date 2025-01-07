@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const Declensions = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>When we say that a noun is in the first declension, it is masculine; when we say it is in the second declension, it is feminine; and when we say it is in the third declension, it is neuter.</p>
       <ul>
         <li><span className="par"><span className="par">Parisyllabic</span></span> nouns: nouns that have the same number of syllables in the plural as they have in the nominative singular. An example of this category is the noun ο μήνας, <em>the month</em>, which in the plural becomes οι μήνες, <em>the months</em>.</li>

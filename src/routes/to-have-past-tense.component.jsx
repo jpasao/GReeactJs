@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const ToHavePastTense = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>The full conjugation of είχα is:</p>
       <table>
         <thead>
@@ -52,9 +52,9 @@ const ToHavePastTense = ({title}) => {
             <td>Third person</td>
             <td>αυτοί / αυτές / αυτά είχαν</td>
             <td><em>they had</em></td>
-          </tr>          
+          </tr>
           </tbody>
-      </table>      
+      </table>
     </Article>
   )
 }

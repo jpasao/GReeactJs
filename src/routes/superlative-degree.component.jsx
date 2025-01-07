@@ -173,7 +173,7 @@ const SuperlativeDegree = ({title}) => {
     })
 
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>The relative superlative is when it indicates that the noun mentioned has the particular quality/attribute in the highest degree in the when compared to all similar nouns:</p>
       <dl>
         <dt>For Example:</dt>
@@ -243,7 +243,7 @@ const SuperlativeDegree = ({title}) => {
                 <td>{ greek }</td>
                 <td>{ compound }</td>
                 <td>{ english }</td>
-              </tr>             
+              </tr>
             )
           })}
         </tbody>

@@ -70,7 +70,7 @@ const DefiniteArticle = ({title}) => {
     ))
 
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <h5>Choose options to filter the table:</h5>
       <DropDown label='Case' options={CASE_TYPE} onChangeHandler={onCaseChange} />
       <DropDown label='Number' options={NUMBER_TYPE} onChangeHandler={onNumberChange} />
@@ -94,7 +94,7 @@ const DefiniteArticle = ({title}) => {
                 <td>{ masculine }</td>
                 <td>{ feminine }</td>
                 <td>{ neuter }</td>
-              </tr>              
+              </tr>
             )
           })}
         </tbody>

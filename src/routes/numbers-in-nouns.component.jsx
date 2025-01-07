@@ -109,7 +109,7 @@ const NumbersInNouns = ({title}) => {
     .filter((noun) => noun.gender === gender || gender === GENDER_TYPE.all)
 
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>In the plural, the word μήνας becomes μήνες meaning <em>months</em>, which is a modification of the word's last syllable</p>
       <h5>Choose options to filter the table:</h5>
       <DropDown label='Gender' options={GENDER_TYPE} onChangeHandler={onGenderChange} />
@@ -129,9 +129,9 @@ const NumbersInNouns = ({title}) => {
                 <td>{singular}</td>
                 <td>{plural}</td>
                 <td><em>{english}</em></td>
-              </tr>              
+              </tr>
             )
-          })}          
+          })}
         </tbody>
       </table>
     </Article>

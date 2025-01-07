@@ -543,10 +543,10 @@ const PastTenses = ({title}) => {
         return (verbItem.verbCase === cases || cases === 'all') 
           && verbChecked !== undefined
           && verbChecked.checked;
-    })    
+    })
 
   return(
-    <Article title={title}>     
+    <Article title={title}>
       <p>In some cases i.e., the verbs ανεβαίνω, κατεβαίνω and πηγαίνω things are pretty much normal: we removed the last syllable -αίνω and in its place we have -ήκα, -ήκες, -ήκε, -ήκαμε, -ήκατε, and -ήκαν.</p>
       <p>In some other cases, i.e. the verbs ακούω, διαβάζω and αφήνω, the last syllable is again the one to go, i.e. -ω, -ζω, and -νω, respectively and in their place we have -σα, -σες, -σε, -σαμε, -σατε, and -σαν.</p>
       <p>Things get trickier with the verb περνάω. In its case, the two last syllables -νάω are the ones to be replaced, and in their place we have -ασα, -ασες, -ασε, -άσαμε, -άσατε, and -ασαν.</p>

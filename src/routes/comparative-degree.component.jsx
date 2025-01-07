@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const ComparativeDegree = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>Modern Greek too has two ways of forming the comparative degree of an adjective:</p>
       <ol>
         <li>periphrastically (i.e., with the use of more than one word)</li>

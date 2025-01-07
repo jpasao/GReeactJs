@@ -11,7 +11,7 @@ const App = () => {
         <h1>GreeactJs</h1>
         <p>Modern Greek pills on ReactJs</p>
         <small><Link to='/landing'>return to index</Link></small>
-      </header>      
+      </header>
       <main>
         <Routes>
           <Route path='/' element={<Directory />}></Route> 
@@ -20,7 +20,7 @@ const App = () => {
               <Route key={section.route} path={section.route} element={section.component}></Route>
             )
           }
-        </Routes>      
+        </Routes>
       </main>
       <ScrollButton />
       <footer>

@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const GenitiveWeak = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>Used when English would say <em>to me</em>, <em>to you</em>, <em>to us</em>, or the like</p>
       <table>
         <thead>

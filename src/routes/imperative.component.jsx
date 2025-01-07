@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const Imperative = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>In Greek, the key ending for this form is the epsilon (ε)</p>
       <p>Take the verb stem and simply add -ε. Note, however, that the stress occasionally changes.</p>
       <dl>

@@ -52,3 +52,13 @@ export const ACCENT_TYPE = {
   paroxytone: 'paroxytone',
   proparoxytone: 'proparoxytone'
 }
+export const CATEGORY_TYPES = {
+  parisyllabicNeuter: "Parisyllabic Neuter",
+  parisyllabicFeminineI: "Parisyllabic Feminine ή",
+  parisyllabicMasculineOs: "Parisyllabic Masculine ός",
+  parisyllabicMasculineIs: "Parisyllabic Masculine ής",
+  parisyllabicNeuterO: "Parisyllabic Neuter ό",
+  parisyllabicNeuterOs: "Parisyllabic Neuter ος",
+  parisyllabicFeminineOs: "Parisyllabic Feminine ός",
+  secondConjugationVerb: "Second Conjugation Verb"
+}

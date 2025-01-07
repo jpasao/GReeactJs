@@ -2,7 +2,7 @@ import Article from "../components/article.component";
 
 const GenitiveCases = ({title}) => {
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>We answer the question <em>who</em> or <em>what</em> with the nominative case:</p>
       <ol>
         <li>Ποιος είναι; <em>Who is it?</em></li>

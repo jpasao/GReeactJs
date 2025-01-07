@@ -54,7 +54,7 @@ const IndefiniteArticle = ({title}) => {
     .filter((phrase) => phrase.type === types || types === ARTICLE_TYPE.all)
 
   return(
-    <Article title={title}>      
+    <Article title={title}>
       <p>The indefinite articles ένας, μία, and ένα are the masculine, feminine, and neuter, respectively</p>
       <p>We also use it as an indefinite personal pronoun and as the numeral one</p>
       <p>The good thing is that regardless of whether we are dealing with the indefinite article, the indefinite personal pronoun, or the numeral, we always decline the words ένας, μία and ένα the same way</p>
@@ -75,7 +75,7 @@ const IndefiniteArticle = ({title}) => {
               <tr key={greek}>
                 <td>{greek}</td>
                 <td><em>{english}</em></td>
-              </tr>              
+              </tr>
             )
           })}
         </tbody>
