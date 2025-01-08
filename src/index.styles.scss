@@ -9,6 +9,11 @@ $light-theme-grey: #a6a6a6;
 $green-background: #61ffb04a;
 $blue-background: #61abff4a;
 
+$right: #29ff69;
+$right-attenuated: #29ff6965;
+$wrong: #f06292;
+$wrong-attenuated: #f0629165;
+
 @font-face {
   font-family: 'NotoSerif';
   src: url('../public/NotoSerif-Regular.ttf');
@@ -88,23 +93,41 @@ article {
   .modalHelp::backdrop {
     background: rgba(0, 0, 0, 0.75)
   }
+  span.rightAnswer, span.wrongAnswer {
+    padding: 8px;
+    border-radius: var(--standard-border-radius);
+  }
   span.rightAnswer {
-    color: rgb(106, 255, 106);
+    color: $right;
+    background-color: $right-attenuated;
   }
   span.wrongAnswer {
-    color: rgb(255, 138, 138);
+    color: $wrong;
+    background-color: $wrong-attenuated;
   }
 }
 
 @media (prefers-color-scheme: light) {
+  $wrong: #d81b60;
+  $wrong-attenuated: #d81b6065;
+  $right: #14973b;
+  $right-attenuated: #27d25a65;
   article {
-    em {    
+    em {
       color: $light-theme-blue-accent;
     }
     input[type='checkbox']{
       &:checked{
         background-color: $light-theme-blue-accent;
       }
+    }
+    span.rightAnswer {
+      color: $right;
+      background-color: $right-attenuated;
+    }
+    span.wrongAnswer {
+      color: $wrong;
+      background-color: $wrong-attenuated;
     }
   }
 

@@ -17,6 +17,7 @@ const Quiz = ({title}) => {
     const [answered, setAnswered] = useState(false)
     const [modal, setModal] = useState(false)
     const [comboAnswers, setComboAnswers] = useState([])
+    const [helpTable, setHelpTable] = useState([])
     const getRandomItem = (list) => list[Math.floor((Math.random() * list.length))]
     const accentedVocals = ['ά', 'έ', 'ί', 'ή', 'ό', 'ώ', 'ύ']
     const unaccentedVocals = ['α', 'ε', 'ι', 'η', 'ο', 'ω', 'υ']
@@ -125,7 +126,18 @@ const Quiz = ({title}) => {
         }
         newAnswers.sort((a, b) => a.order - b.order)
 
-        setComboAnswers(newAnswers);
+        setHelpTable(newAnswers)
+        const mappedOptions = newAnswers.map((answer) => {
+            return { ending: answer.ending }
+        })
+        const uniqueOptions = mappedOptions.reduce((acc, current) => {
+            const found = acc.find(item => item.ending === current.ending)
+            return found 
+                ? acc
+                : acc.concat([current])
+            }, []
+        )
+        setComboAnswers(uniqueOptions)
         const newQuestion = getRandomItem(newAnswers);
         setQuestion(newQuestion)
     }
@@ -165,7 +177,7 @@ const Quiz = ({title}) => {
                                 </thead>
                                 <tbody>
                                     {
-                                        comboAnswers.map((answer) => {
+                                        helpTable.map((answer) => {
                                             const fullWord = `${word?.element}${answer.ending}`
                                             let modifiedWord = fullWord;
                                             if (answer.moveAccent !== undefined && answer.moveAccent === true) {
@@ -211,9 +223,7 @@ const Quiz = ({title}) => {
                         <span className="attenuated">{question?.starting}</span> {word?.element}
                         <span className="attenuated">{answer}</span>
                     </h3>
-                    <p>
-                        <cite>{word?.translation}</cite>
-                    </p>
+                    <h6>{word?.translation}</h6>
                 </section>
             }
             {!initialized && <Button buttonProps={beginProps} />}
