@@ -1,7 +1,34 @@
  import * as c from "./constants";
  import { ACCENT_TYPE as accent, CLASS_TYPE as classes } from "./enum-types";
 
-const questions = [
+ export const helpComments = [
+    {
+        "category": c.parisyllabicFeminineI,
+        "help": "All nouns of this category are accented in the last syllable in the plural genitive. Some paroxytone and proparoxytone nouns of this category don't form the plural genitive. These are usually abstract or uncountable nouns"
+    },
+    {
+        "category": c.parisyllabicMasculineOs,
+        "help": "Some parisyllabic proparoxytone -ος ending nouns move their accent one position to the right in the genitive case (singular and plural) and in the plural accusative"
+    },
+    {
+        "category": c.parisyllabicMasculineIs,
+        "help": "In the plural genitive, all parisyllabic masculine -ης ending nouns are accented in the last syllable"
+    },
+    {
+        "category": c.parisyllabicNeuterO,
+        "help": "Some proparoxytone nouns move their accent mark one position to the right in the genitive case (singular and plural). Trisyllabic proparoxytone place names usually behave like that"
+    },
+    {
+        "category": c.parisyllabicNeuterOs,
+        "help": "Nominative and accusative move their accent one position to the right. All the nouns of this group move their accent to the last syllable in the plural genitive case"
+    },
+    {
+        "category": c.parisyllabicFeminineOs,
+        "help": "The proparoxytone nouns move their accent mark one position to the right in the genitive case (singular and plural) and in the plural accusative"
+    },
+]
+
+export const questions = [
     { "element": "κλειδ", "category": c.parisyllabicNeuter, "accent": accent.oxytone, "translation": "key", "moveToLast": true },
     { "element": "αρν", "category": c.parisyllabicNeuter, "accent": accent.oxytone, "translation": "lamb", "moveToLast": true },
     { "element": "νησ", "category": c.parisyllabicNeuter, "accent": accent.oxytone, "translation": "island", "moveToLast": true },
@@ -108,7 +135,7 @@ const questions = [
     { "element": "δανειστ", "category": c.parisyllabicMasculineIs, "accent": accent.oxytone, "translation": "lender" },
     { "element": "διευθυντ", "category": c.parisyllabicMasculineIs, "accent": accent.oxytone, "translation": "principal, manager, director" },
     { "element": "δικαστ", "category": c.parisyllabicMasculineIs, "accent": accent.oxytone, "translation": "judge" },
-    { "element": " λογιστ", "category": c.parisyllabicMasculineIs, "accent": accent.oxytone, "translation": "accountant" },
+    { "element": "λογιστ", "category": c.parisyllabicMasculineIs, "accent": accent.oxytone, "translation": "accountant" },
     { "element": "ποιητ", "category": c.parisyllabicMasculineIs, "accent": accent.oxytone, "translation": "poet" },
     { "element": "σπουδαστ", "category": c.parisyllabicMasculineIs, "accent": accent.oxytone, "translation": "university student" },
     { "element": "βιβλιοπώλ", "category": c.parisyllabicMasculineIs, "accent": accent.paroxytone, "translation": "bookseller" },
@@ -207,5 +234,3 @@ const questions = [
     { "element": "σταχτ", "category": c.isIaIAdjective, "translation": "gray ash (color)" },
     { "element": "χρυσαφ", "category": c.isIaIAdjective, "translation": "golden (color)" },
 ];
-
-export default questions;
